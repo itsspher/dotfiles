@@ -1,0 +1,4 @@
+#!/bin/bash
+
+cp -R ~/college/templates/slides-template.md $PWD
+mv slides-template.md "$1.md"

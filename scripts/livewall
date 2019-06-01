@@ -1,0 +1,8 @@
+#!/bin/bash
+
+killall -q mpv
+
+while pgrep -u $UID -x mpv >/dev/null; do
+sleep 1; done
+
+xwinwrap -ov -ni -fs -- mpv -wid WID --keepaspect=no --shuffle --loop-file ~/Pictures/live-wallpapers &

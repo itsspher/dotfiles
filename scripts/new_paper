@@ -1,0 +1,4 @@
+#!/bin/bash
+
+cp -R ~/college/templates/paper-template.md $PWD
+mv paper-template.md "$1.md"

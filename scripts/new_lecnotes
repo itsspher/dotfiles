@@ -1,0 +1,4 @@
+#!/bin/bash
+
+cp -R ~/college/templates/lecnotes-template.md $PWD
+mv lecnotes-template.md "$1.md"
