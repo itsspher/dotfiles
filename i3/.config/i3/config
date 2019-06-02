@@ -217,7 +217,7 @@ bindsym XF86AudioPrev exec playerctl previous
 exec_always compton &
 
 # screenshot
-bindsym Mod4+Shift+s exec scrot -e 'mv $f ~/Pictures/Screenshots'
+bindsym Mod4+Shift+s exec deepin-screenshot
 
 # Font for window titles. Will also be used by the bar unless a different font
 # is used in the bar {} block below.
