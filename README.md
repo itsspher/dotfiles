@@ -8,6 +8,17 @@ These are all my dotfiles. The following serves as a reminder for me just in cas
 
 Make symbolic links at `~/scripts` for scripts and `~/Pictures/live-wallpapers` for live-wallpapers.
 
+### fonts
+
+you'll need
+
+- undefined-medium
+- Ubuntu Nerd Font
+- Unifont
+- ttf-baekmuk
+- ttf-hannom
+- ttf-hanazono
+
 ### everything else
 
 Do this command: `stow ${PKGNAME}` for each path.  
