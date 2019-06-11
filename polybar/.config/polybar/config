@@ -57,10 +57,11 @@ font-5 = "HanaMinA:style=Regular:size=10:antialias=true;1"
 
 modules-left = i3 xwindow spotify
 modules-center = date
-modules-right = filesystem backlight-acpi pulseaudio cpu memory temperature battery 
+modules-right = filesystem backlight-acpi pulseaudio cpu memory battery 
 
 tray-position = right
 tray-padding = 0.5
+tray-background = ${colors.background}
 
 wm-restack = i3
 
@@ -290,8 +291,8 @@ format-disconnected = "NOT CONNECTED"
 type = internal/date
 interval = 5
 
-date = 
-date-alt = " %Y-%m-%d, "
+date = " %Y-%m-%d | "
+date-alt = " %Y-%m-%d | "
 
 time = %H:%M
 time-alt = %H:%M
