@@ -365,11 +365,11 @@ full-at = 99
 
 time-format = %H:%M
 
-label-charging = %percentage%%, %time% to full
+label-charging = %percentage%% | %time% to full
 format-charging = <animation-charging> <label-charging>
 format-charging-underline = #ffb52a
 
-label-discharging = %percentage%%, %time% rmng
+label-discharging = %percentage%% | %time% rmng
 format-discharging = <animation-discharging> <label-discharging>
 format-discharging-underline = ${self.format-charging-underline}
 
