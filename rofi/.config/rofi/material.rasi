@@ -1,3 +1,4 @@
+
 /*
  * ROFI color theme
  *
@@ -11,7 +12,7 @@
 	base00: #263238;
 	base01: #2E3C43;
 	base02: #314549;
-	base03: #546E7A;
+	base03: #37393A;
 	base04: #B2CCD6;
 	base05: #EEFFFF;
 	base06: #EEFFFF;
@@ -40,7 +41,7 @@ window {
 }
 
 mainbox {
-	children: [inputbar, message, sidebar, listview];
+	children: [inputbar, message, mode-switcher, listview];
 	spacing: 30px;
 	/*margin: 20%;*/
 	padding: 30px 0;
@@ -72,7 +73,7 @@ case-indicator {
 	text-color: @base0F;
 }
 
-sidebar, message {
+mode-switcher, message {
 	border: 1px 0;
 	border-color: @base0D;
 }
@@ -93,7 +94,7 @@ listview {
 }
 
 scrollbar {
-	background-color: @base07;
+	background-color: @base03;
 	handle-color: @base0D;
 	handle-width: 10px;
 	border: 0 1px;
