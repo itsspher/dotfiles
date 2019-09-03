@@ -126,7 +126,6 @@ interval = 1
 format-prefix = 
 format = <label>
 exec = python $HOME/scripts/spotify_status.py -f '{artist}: {song}'
-format-underline = #1db954
 
 [module/filesystem]
 type = internal/fs

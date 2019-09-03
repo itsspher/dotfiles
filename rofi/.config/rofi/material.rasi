@@ -31,7 +31,7 @@
 	spacing: 0;
 	background-color: transparent;
 
-	font: "Roboto Mono 13";
+	font: "Source Code Pro 13";
 }
 
 window {

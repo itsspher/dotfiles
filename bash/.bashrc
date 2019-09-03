@@ -142,8 +142,8 @@ ex ()
 export YAOURT_COLORS="nb=1:pkg=1:ver=1;32:lver=1;45:installed=1;42:grp=1;34:od=1;41;5:votes=1;44:dsc=0:other=1;35"
 
 # adding self scripts folder to PATH
-PATH="$HOME/scripts:$PATH"
-export PATH
+export NODE_PATH=$HOME/.npm/lib/node_modules
+PATH="$HOME/scripts:$/.npm/bin:$PATH"
 
 # setting default editor to vim
 VISUAL=vim

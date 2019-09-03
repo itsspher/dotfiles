@@ -33,17 +33,20 @@ vnoremap <leader><leader> <Esc>/<++><Enter>"_c4l
 map <leader><leader> <Esc>/<++><Enter>"_c4l
 
 " Markdown macros
-let g:vim_markdown_folding_disabled = 1
 let g:goyo_width = 120
 let g:vim_markdown_frontmatter = 1
 autocmd BufRead,BufNewFile *.md :SoftPencil
 autocmd BufRead,BufNewFile *.md :Goyo
-autocmd Filetype markdown,rmd inoremap ,m <Enter>$$<Enter><Enter>$$<Enter><Enter><++><Esc>kkkA
+autocmd Filetype markdown,rmd inoremap ,m <Enter>\begin{align*}<Enter><Enter>\end{align*}<Enter><Enter><++><Esc>kkkA
 autocmd Filetype markdown,rmd inoremap ,n ---<Enter><Enter>
 autocmd Filetype markdown,rmd inoremap ,b ****<++><Esc>F*hi
 autocmd Filetype markdown,rmd inoremap ,s ~~~~<++><Esc>F~hi
 autocmd Filetype markdown,rmd inoremap ,e **<++><Esc>F*i
 autocmd Filetype markdown,rmd inoremap ,g {}{<++>} <++><Esc>11hci{
 autocmd Filetype markdown,rmd inoremap ,$ $$ <++><Esc>5hi
-autocmd Filetype markdown,rmd inoremap ,i ![](<++>) <++><Esc>11hi
+autocmd Filetype markdown,rmd inoremap ,i \begin{figure}<Enter><Tab>\centering<Enter><Tab>\includegraphics[width=0.5\textwidth]{}<Enter><Backspace>\caption{<++>}<Enter><Backspace>\end{figure}<Esc>2k0f}i
 
+" Castel's spellcheck macro
+autocmd Filetype markdown,rmd setlocal spell
+autocmd Filetype markdown,rmd set spelllang=en_us
+autocmd Filetype markdown,rmd inoremap <C-l> <c-g>u<Esc>[s1z=`]a<c-g>u

@@ -1,0 +1,3 @@
+#!/bin/bash
+xdotool click --repeat 99999999999 --delay 500 3
+
