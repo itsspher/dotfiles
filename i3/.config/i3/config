@@ -11,7 +11,7 @@
 
 # Font for window titles. Will also be used by the bar unless a different font
 # is used in the bar {} block below.
-font pango:undefined-medium 8
+font pango:Source Code Pro 10
 
 # This font is widely installed, provides lots of unicode glyphs, right-to-left
 # text rendering and scalability on retina/hidpi displays (thanks to pango).
@@ -41,7 +41,7 @@ bindsym Mod4+Return exec kitty
 bindsym Mod4+Shift+q kill
 
 # start dmenu (a program launcher)
-bindsym Mod4+d exec rofi -show run -theme material
+bindsym Mod4+d exec ~/scripts/appsmenu
 # There also is the (new) i3-dmenu-desktop which only displays applications
 # shipping a .desktop file. It is a wrapper around dmenu, so you need that
 # installed.
@@ -78,9 +78,9 @@ bindsym Mod4+q split toggle
 bindsym Mod4+f fullscreen toggle
 
 # change container layout (stacked, tabbed, toggle split)
-bindsym Mod4+s layout stacking
-bindsym Mod4+w layout tabbed
-bindsym Mod4+e layout toggle split
+# bindsym Mod4+s layout stacking
+# bindsym Mod4+w layout tabbed
+# bindsym Mod4+e layout toggle split
 
 # toggle tiling / floating
 bindsym Mod4+Shift+space floating toggle
@@ -180,25 +180,22 @@ bindsym Mod4+r mode "resize"
 #}
 
 # shut down, restart, and locking features
-bindsym Mod4+Delete exec ~/scripts/rofi-computer
-bindsym Mod4+shift+Delete exec betterlockscreen -l
-
-# live wallpaper
-exec_always ~/scripts/livewall
+bindsym Mod4+Delete exec ~/scripts/powermenu
+bindsym Mod4+shift+Delete exec light-locker-command -l
 
 # polybar
-exec_always ~/scripts/polybarstart
+exec_always --no-startup-id ~/scripts/polybarstart
 
 # xmodmap
-exec_always xmodmap ~/.Xmodmap
+exec_always --no-startup-id xmodmap ~/.Xmodmap
 
 # bluetooth and network applets
-exec nm-applet
-exec blueman-applet
+exec --no-startup-id nm-applet
+exec --no-startup-id  blueman-applet
 
 new_window pixel 0
 
-gaps inner 12
+gaps inner 8
 gaps outer 0
 
 # Pulse Audio controls
@@ -217,14 +214,14 @@ bindsym XF86AudioNext exec playerctl next
 bindsym XF86AudioPrev exec playerctl previous
 
 # compton
-exec_always compton &
+exec_always --no-startup-id compton &
 
 # screenshot
 bindsym Mod4+Shift+s exec deepin-screenshot
 
 # Font for window titles. Will also be used by the bar unless a different font
 # is used in the bar {} block below.
-font xft:undefined 11
+font xft:Source Code Pro 10
 
 # Use Mouse+$mod to drag floating windows
 floating_modifier Mod1
@@ -238,3 +235,39 @@ bindsym Mod4+n exec ~/scripts/unicode-selector
 # mount and umount scripts
 bindsym Mod4+m exec ~/scripts/mountscript
 bindsym Mod4+Shift+m exec ~/scripts/umountscript
+
+# luke smith's i3resize script
+bindsym Mod4+Shift+u		exec --no-startup-id ~/scripts/i3resize left
+bindsym Mod4+Shift+i		exec --no-startup-id ~/scripts/i3resize down
+bindsym Mod4+Shift+o		exec --no-startup-id ~/scripts/i3resize up
+bindsym Mod4+Shift+p		exec --no-startup-id ~/scripts/i3resize right
+
+# i3layoutmenu 
+bindsym Mod4+w exec --no-startup-id ~/scripts/i3layoutmenu
+
+# clipman
+exec_always --no-startup-id xfce4-clipman
+
+# power manager
+exec --no-startup-id xfce4-power-manager
+
+# light locker
+exec light-locker --lock-after-screensaver=0
+
+# inactivity script
+exec_always ~/scripts/inactivity
+
+exec_always --no-startup-id ~/scripts/livewall
+
+# refresh wallpaper
+bindsym Mod4+Shift+w exec --no-startup-id ~/scripts/livewall
+
+# colors
+# class		border		background		text		indicator		child_border
+client.focused                  #1c0723         #1c0723         #ffffff         $coloratt       #000000
+client.focused_inactive         #333333         #1c0723         #e3c5cd         $coloratt       #000000
+client.unfocused                #333333         #1c0723         #775f66         $coloratt       #000000
+client.urgent                   #2f343a         #900000         #ffffff         $coloratt       #900000
+client.placeholder              #000000         #000000         #ffffff         $coloratt       #0c0c0c
+
+

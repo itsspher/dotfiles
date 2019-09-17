@@ -1,0 +1,15 @@
+#!/bin/bash
+
+killall -q xidlehook
+
+xidlehook \
+       	--not-when-fullscreen \
+       	--not-when-audio \
+	--timer normal 60 \
+	"xset dpms force off" \
+	"" \
+       	--timer primary 240 \
+	"xset dpms force off; light-locker-command -l" \
+	""
+
+	
